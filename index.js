@@ -5,6 +5,10 @@ const express = require("express");
 const app = express();
 app.use(express.static("public"));
 
+app.get("/", (req, res) => {
+  res.sendFile(`./index.html`);
+});
+
 app.get("/applications", (req, res) => {
   res.send(`<!DOCTYPE html> <html> <head> <meta name="viewport" content="width=device-width, initial-scale=1"> <style> body, html { height: 100%; margin: 0; } .content { position: absolute; top: 15%; left:25%; background: rgb(0, 0, 0); /* Fallback color */ background: rgba(0, 0, 0, 0.76); /* Black background with 0.5 opacity */ color: #f1f1f1; width: 50%; padding: 20px; } .bg { /* The image used */ background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRqNquWxQHJAPgugDwzXokAU_dQUXzknUTA&usqp=CAU"); /* Full height */ height: 100%; /* Center and scale the image nicely */ background-position: center; background-repeat: no-repeat; background-size: cover; } table { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; } td, th { border: 1px solid #dddddd; text-align: left; padding: 8px; } div.parent { text-align: center; } ul { display: inline-block; text-align: left; }</style>
     </head> <body> <div class="bg"></div>  <div class="content"> <h1 id="home" 
@@ -86,7 +90,6 @@ app.get('/codepen/css', (req, res) => {
       
     `)
   })
-
 
   app.get('/codepen/scripts', (req, res) => {
     res.type('text/javascript');

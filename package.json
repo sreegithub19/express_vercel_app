@@ -1,7 +1,7 @@
 {
   "name": "express_vercel_app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Versions used:",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

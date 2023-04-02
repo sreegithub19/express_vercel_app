@@ -18,6 +18,10 @@ Vercel: (app name: express-vercel-app)
 
 - vercel --prod
 
+All in one:
+
+- git add . && git commit -m "c" && git push origin master && vercel --prod
+
 Demo:
 
 -

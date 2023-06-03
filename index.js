@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 # Running on http://127.0.0.1:5000/
 
-@app.route("/")
+@app.route("/flaskit")
 def index():
     print("2+3 is:",2+3)
     html = r'''
